@@ -1,9 +1,15 @@
+import Navbar from "../components/Navbar/Navbar";
+import Hero from "../components/Hero/Hero";
+import Features from "../components/Features/Features";
+import Footer from "../components/Footer/Footer";
+
 function Home() {
   return (
-    <div>
-      <h1>Welcome to AuraHire AI</h1>
-      <p>Your AI Interview Platform</p>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <Features />
+    </>
   );
 }
 
