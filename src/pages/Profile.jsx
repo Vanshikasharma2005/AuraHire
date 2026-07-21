@@ -1,5 +1,11 @@
-function Profile() {
-  return <h1>Profile Page</h1>;
+function Profile(){
+
+    return(
+        <div>
+            <h1>Student Profile Page</h1>
+        </div>
+    )
+
 }
 
 export default Profile;

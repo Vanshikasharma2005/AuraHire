@@ -1,22 +1,18 @@
 import { Link } from "react-router-dom";
-import "./Navbar.css";
 
-function Navbar() {
-  return (
-    <nav className="navbar">
-      <div className="logo">AuraHire</div>
+function Navbar(){
 
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/interview">Interview</Link></li>
-        <li><Link to="/roadmap">Roadmap</Link></li>
-        <li><Link to="/profile">Profile</Link></li>
-      </ul>
+ return(
+   <div>
+      <h1>AuraHire AI</h1>
 
-      <button className="nav-btn">Get Started</button>
-    </nav>
-  );
+     <Link to="/register">
+      <button>Get Started</button>
+     </Link> 
+
+   </div>
+ )
+
 }
 
 export default Navbar;

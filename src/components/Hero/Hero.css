@@ -1,48 +1,69 @@
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px;
-  background: #0b0f1a;
-  color: white;
-  min-height: 90vh;
+.hero-section {
+  @apply relative overflow-hidden bg-[#050816];
 }
 
-.hero-left {
-  width: 50%;
+/* Background Glow */
+
+.hero-glow {
+  @apply absolute w-96 h-96 rounded-full blur-[140px];
 }
 
-.hero-left h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
+.hero-glow-left {
+  @apply top-0 left-0 bg-cyan-500/20;
 }
 
-.hero-left p {
-  font-size: 20px;
-  line-height: 1.7;
-  margin-bottom: 30px;
+.hero-glow-right {
+  @apply bottom-0 right-0 bg-violet-600/20;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 20px;
+/* Main Layout */
+
+.hero-container {
+  @apply max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 items-center gap-16;
 }
 
-.hero-buttons button {
-  padding: 15px 25px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+/* Left Side */
+
+.hero-content {
+  @apply relative z-10;
 }
 
-.ai-circle {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  background: #12203b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 120px;
-  box-shadow: 0 0 60px #4dd4ff;
+.hero-badge {
+  @apply inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-400 text-sm;
+}
+
+.hero-title {
+  @apply text-5xl lg:text-7xl font-extrabold text-white leading-tight;
+}
+
+.hero-highlight {
+  @apply text-cyan-400;
+}
+
+.hero-description {
+  @apply mt-8 text-lg leading-8 text-gray-400;
+}
+
+.hero-actions {
+  @apply flex flex-wrap gap-5 mt-10;
+}
+
+/* Buttons */
+
+.primary-button {
+  @apply flex items-center gap-2 px-8 py-4 rounded-xl font-semibold transition bg-cyan-500 hover:bg-cyan-400 text-black;
+}
+
+.secondary-button {
+  @apply px-8 py-4 rounded-xl border border-gray-700 hover:border-cyan-500 text-white;
+}
+
+/* Right Side */
+
+.hero-image {
+  @apply relative flex justify-center;
+}
+
+.hero-photo {
+  @apply relative z-10 w-[420px];
 }

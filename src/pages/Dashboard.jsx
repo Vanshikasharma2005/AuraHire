@@ -1,5 +1,11 @@
-function Dashboard() {
-  return <h1>Dashboard Page</h1>;
+function Dashboard(){
+
+    return(
+        <div>
+            <h1>AI Career Dashboard</h1>
+        </div>
+    )
+
 }
 
 export default Dashboard;

@@ -2,26 +2,35 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-import Interview from "./pages/Interview";
 import Profile from "./pages/Profile";
-import Roadmap from "./pages/Roadmap";
+import ResumeUpload from "./pages/ResumeUpload";
+
 
 function App() {
+
   return (
     <BrowserRouter>
+
       <Routes>
 
         <Route path="/" element={<Home />} />
+
         <Route path="/login" element={<Login />} />
+
+        <Route path="/register" element={<Register />} />
+
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/interview" element={<Interview />} />
+
         <Route path="/profile" element={<Profile />} />
-        <Route path="/roadmap" element={<Roadmap />} />
+
+        <Route path="/resume-upload" element={<ResumeUpload />} />
 
       </Routes>
+
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;

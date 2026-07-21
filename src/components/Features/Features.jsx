@@ -1,51 +1,77 @@
-import "./Features.css";
-import { FileText, Target, Mic, Map } from "lucide-react";
-
 function Features() {
+
   const features = [
     {
-      icon: <FileText size={40} />,
-      title: "AI Resume Analysis",
+      title: "AI Resume Analyzer",
       description:
-        "Upload your resume and receive intelligent feedback to improve it."
+        "Get AI-powered feedback on your resume and improve structure, skills, and content to stand out."
     },
     {
-      icon: <Target size={40} />,
-      title: "ATS Score",
+      title: "Skill Gap Detection",
       description:
-        "Know how well your resume performs with Applicant Tracking Systems."
+        "Analyze your current skills and discover what you need to learn for your desired career path."
     },
     {
-      icon: <Mic size={40} />,
-      title: "Mock Interview",
+      title: "Profile Enhancement",
       description:
-        "Practice interview questions with Aura and improve your confidence."
+        "Build a stronger professional profile with personalized recommendations and improvements."
     },
     {
-      icon: <Map size={40} />,
-      title: "Career Roadmap",
+      title: "AI Interview Preparation",
       description:
-        "Get a personalized learning path based on your career goals."
+        "Practice interviews with AI feedback to improve confidence and communication skills."
     }
   ];
 
+
   return (
-    <section className="features">
-      <h2>Why Choose AuraHire?</h2>
+    <section className="bg-black text-white px-10 py-20">
 
-      <div className="features-grid">
-        {features.map((feature, index) => (
-          <div className="feature-card" key={index}>
-            <div className="icon">{feature.icon}</div>
+      <h2 className="text-4xl font-bold text-center">
+        Smart Tools For Your Career Growth
+      </h2>
 
-            <h3>{feature.title}</h3>
+      <p className="text-gray-400 text-center mt-4">
+        Everything you need to improve your profile and become job-ready.
+      </p>
 
-            <p>{feature.description}</p>
-          </div>
-        ))}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+
+        {
+          features.map((feature, index)=>(
+            
+            <div
+              key={index}
+              className="
+              bg-white/10
+              backdrop-blur-lg
+              rounded-2xl
+              p-6
+              border
+              border-purple-500/30
+              hover:scale-105
+              transition
+              "
+            >
+
+              <h3 className="text-xl font-semibold text-purple-400">
+                {feature.title}
+              </h3>
+
+              <p className="text-gray-300 mt-4">
+                {feature.description}
+              </p>
+
+            </div>
+
+          ))
+        }
+
       </div>
+
     </section>
-  );
+  )
 }
 
 export default Features;

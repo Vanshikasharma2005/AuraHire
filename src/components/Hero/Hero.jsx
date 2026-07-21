@@ -1,29 +1,41 @@
-import "./Hero.css";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
     <section className="hero">
-      <div className="hero-left">
+
+      <div className="hero-content">
+
         <h1>
-          Future of Hiring
-          <br />
-          Starts Here
+          Build Your Career With AuraHire AI
         </h1>
 
         <p>
-          Meet Aura, your AI Recruitment Assistant that helps
-          candidates prepare smarter and companies hire better.
+          Build a stronger career profile with AI-powered resume improvement,
+          skill analysis, and personalized career guidance.
         </p>
 
+
         <div className="hero-buttons">
-          <button>Upload Resume</button>
-          <button>Talk to Aura</button>
+
+          <Link to="/register">
+            <button>
+              Get Started
+            </button>
+          </Link>
+
+
+          <Link to="/register">
+            <button>
+              Improve My Profile
+            </button>
+          </Link>
+
         </div>
+
       </div>
 
-      <div className="hero-right">
-        <div className="ai-circle">🤖</div>
-      </div>
+
     </section>
   );
 }
